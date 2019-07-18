@@ -2,6 +2,7 @@ package com.qa.persistence.repository;
 
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -18,7 +19,8 @@ public class AccountDBRepository implements AccountRepository {
 	@PersistenceContext(unitName = "primary")
 	private EntityManager manager;
 
-	private JSONUtil json = new JSONUtil();
+	@Inject
+	private JSONUtil json;
 
 	@Override
 	public String getAllAccounts() {

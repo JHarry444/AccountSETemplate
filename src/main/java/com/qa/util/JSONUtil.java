@@ -1,7 +1,10 @@
 package com.qa.util;
 
+import javax.enterprise.inject.Default;
+
 import com.google.gson.Gson;
 
+@Default
 public class JSONUtil {
 
 	private Gson gson;
@@ -15,7 +18,7 @@ public class JSONUtil {
 	}
 
 	public <T> T getObjectForJSON(String jsonString, Class<T> clazz) {
-		
+
 		return gson.fromJson(jsonString, clazz);
 	}
 
