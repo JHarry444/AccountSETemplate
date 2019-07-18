@@ -1,0 +1,1 @@
+--INSERT INTO account (accountNumber, firstName, lastName) VALUES ("abc123", "Scoot", "Pacino");
