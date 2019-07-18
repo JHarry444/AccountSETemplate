@@ -55,10 +55,9 @@ public class AccountDBRepository implements AccountRepository {
 		}
 		existing.setAccountNumber(newAccount.getAccountNumber());
 		existing.setFirstName(newAccount.getFirstName());
-		existing.setId(newAccount.getId());
 		existing.setLastName(newAccount.getLastName());
 		this.manager.persist(existing);
-		return null;
+		return SUCCESS;
 	}
 
 	@Override
